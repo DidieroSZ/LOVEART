@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Lavishly+Yours&family=Mea+Culpa&family=Miss+Fajardose&display=swap');
+
+/** GENERAL DOCUMENT CONFIGURATIONS */
+:host{
+    --Blanco: #fff;
+    --Gris: #E9EDDE;
+    --Negro: #040F16;
+    --VerdeHard: #44473c;
+    --Olivo: #737766;
+
+    --PadContainer: 2rem;
+    --RadContainer: 2rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--Blanco);
+}
+/** GENERAL DOCUMENT CONFIGURATIONS */
+
+/** FONTS */
+.cursive-font {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mea-culpa {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+}
+.ballet {
+    font-family: "Ballet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+.general-font {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.number-font {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+/** FONTS */
+
+
+/** COMMON CLASES */
+.d-flexx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.d-row{
+    flex-direction: row;
+}
+.d-col{
+    flex-direction: column;
+}
+/** COMMON CLASES */
+
+
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: var(--PadContainer);
+    
+    background-color: var(--Negro);
+}
+    .love-container{
+        width: max(70%, 900px);
+        height: 80%;
+        background-color: var(--Olivo);
+        border-radius: var(--RadContainer);
+        padding: var(--PadContainer);
+        position: relative;
+    }
+
+        .general-container{
+            width: calc(50% - var(--PadContainer));
+            height: auto;
+            position: absolute;
+            top: var(--PadContainer);
+            left: var(--PadContainer);
+            overflow: hidden;
+        }
+
+
+@media only screen and (max-width: 900px) {
+    :host{
+        --PadContainer: 1rem;
+        --RadContainer: 2rem;
+    }
+
+    .main-container{
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+    }
+    .love-container{
+        width: 100%;
+        height: 100%;
+        justify-content: start;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+        .general-container{
+            width: 100%;
+            position: relative;
+            top: auto;
+            left: auto;
+            overflow: hidden;
+        }
+}

@@ -1,0 +1,29 @@
+.letter-container{
+    justify-content: center;
+}
+    .letter-text{
+        font-size: 2.5rem;
+        list-style: none;
+        line-height: 2cap;
+        text-align: center;
+    }
+    .flores{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+@media only screen and (max-width: 900px) {
+    .letter-container{
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+        .letter-text{
+            font-size: 1.8rem;
+            
+        }
+        .flores{
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+}

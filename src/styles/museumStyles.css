@@ -1,0 +1,217 @@
+.museum-container{
+    height: calc(100% - (var(--PadContainer) * 2));
+    left: auto;
+    right: var(--PadContainer);
+}
+
+    .container-photo{
+        width: 14rem;
+        aspect-ratio: 1/1;
+        position: absolute;
+        overflow: hidden;
+    }
+        .mask-photo{
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+            -webkit-mask-position: center;
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            mask-position: center;   
+        }
+            .photo{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        .frame-photo{
+            width: 100%;
+            aspect-ratio: 1/1;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+
+
+        .frame01{
+            width: 14rem;
+            top: 0;
+            left: 0;
+        }
+        .frame01 .mask-photo{
+            -webkit-mask-image: url("../media/mask-01.png");
+            mask-image: url("../media/mask-01.png");
+        }
+        .frame01 .frame-photo{
+            background: url('../media/frame-01.png');
+            background-size: 95%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+        .frame02{
+            width: 22rem;
+            aspect-ratio: 1/1;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 55%;
+        }
+        .frame02 .mask-photo{
+            -webkit-mask-image: url("../media/mask-02.png");
+            mask-image: url("../media/mask-02.png");
+        }
+        .frame02 .frame-photo{
+            background: url('../media/frame-02.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+        .frame03{
+            width: 12rem;
+            aspect-ratio: 1/1;
+            top: 0%;
+            right: 0%;
+        }
+        .frame03 .photo{
+            object-fit: cover;
+        }
+        .frame03 .mask-photo{
+            -webkit-mask-image: url("../media/mask-03.png");
+            mask-image: url("../media/mask-03.png");
+        }
+        .frame03 .frame-photo{
+            background: url('../media/frame-03.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+        .frame04{
+            width: 15rem;
+            aspect-ratio: 1/1;
+            bottom: 15%;
+            left: -6%;
+        }
+        .frame04 .mask-photo{
+            -webkit-mask-image: url("../media/mask-04.png");
+            mask-image: url("../media/mask-04.png");
+        }
+        .frame04 .frame-photo{
+            background: url('../media/frame-04.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+        .frame05{
+            width: 15rem;
+            aspect-ratio: 1/1;
+            bottom: 0%;
+            right: -8%;
+        }
+        .frame05 .mask-photo{
+            -webkit-mask-image: url("../media/mask-05.png");
+            mask-image: url("../media/mask-05.png");
+        }
+        .frame05 .frame-photo{
+            background: url('../media/frame-05.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+@media only screen and (max-width: 900px) {
+    .museum-container{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        min-height: 400px;
+        flex-wrap: wrap;
+        left: auto;
+        right: auto;
+        left: auto;
+        padding-top: var(--PadContainer);
+    }
+
+    .container-photo{
+        width: 20rem;
+        aspect-ratio: 1/1;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .frame01{
+            width: 14rem;
+            bottom: auto;
+            top: auto;
+            left: auto;
+            right: auto;
+            position: relative;
+        }
+
+        .frame02{
+            width: 22rem;
+            aspect-ratio: 1/1;
+            transform: translate(0%, 0%);
+            bottom: auto;
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+
+        .frame03{
+            width: 12rem;
+            aspect-ratio: 1/1;
+            bottom: auto;
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+
+        .frame04{
+            width: 15rem;
+            aspect-ratio: 1/1;
+            bottom: auto;
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+
+        .frame05{
+            width: 15rem;
+            aspect-ratio: 1/1;
+            bottom: auto;
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+}
+
+@media only screen and (max-width: 700px) {
+    .container-photo{
+        width: 20rem !important;
+        aspect-ratio: 1/1;
+        position: relative;
+        overflow: hidden;
+    }
+    .frame02{
+            width: 30rem !important;
+            aspect-ratio: 1/1;
+            transform: translate(0%, 0%);
+            bottom: auto;
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+}

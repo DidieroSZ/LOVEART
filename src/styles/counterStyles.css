@@ -1,0 +1,31 @@
+.counter-container{
+    top: auto;
+    bottom: var(--PadContainer);
+    flex-wrap: nowrap;
+    align-items: start;
+}
+    .counter-container > p:nth-child(1){
+        margin-bottom: 0.5rem;
+    }
+    .counter-text{
+        width: auto;
+        font-size: 1rem;
+        border-bottom: solid 2px var(--Blanco);
+        
+    }
+        .counter-text > span{
+            font-size: 2rem;
+        }
+
+@media only screen and (max-width: 900px) {
+    .counter-container{
+        bottom: auto;
+    }
+        .counter-text{
+            width: 100%;
+            font-size: 0.8rem;            
+        }
+            .counter-text > span{
+                font-size: 1.5rem;
+            }
+}
